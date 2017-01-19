@@ -23,4 +23,4 @@ docker build -t flask-hangman .
 docker run -d -p 5000:5000 flask-hangman
 ```
 
-If everything went ok open http://localhost:5000/ and play the game.
+If everything went ok open [http://localhost:5000/](http://localhost:5000/) and play the game.
