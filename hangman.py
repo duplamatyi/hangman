@@ -16,7 +16,7 @@ def index():
 
 @app.route('/guess', methods=['POST'])
 def guess():
-    guess = request.form['guess']
+    guess = request.form['guess'].lower()
     index = int(request.form['index'])
     hits = []
     for i, c in enumerate(words[index]):

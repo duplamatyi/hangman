@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
 
     function sendForm() {
-        lastGuess = guess.val();
+        lastGuess = guess.val().toLowerCase();
         $.ajax({
           type: "POST",
           url: 'guess',
