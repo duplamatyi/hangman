@@ -17,8 +17,8 @@ Technologies:
 
 Assuming you have Docker installed and you don't need sudo for the docker command:
 
-```
-git@github.com:duplamatyi/hangman.git .
+```shell
+git clone git@github.com:duplamatyi/hangman.git .
 docker build -t flask-hangman .
 docker run -d -p 5000:5000 flask-hangman
 ```
