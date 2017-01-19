@@ -17,8 +17,5 @@ RUN pip install -r requirements.txt
 # Set the Flask app
 ENV FLASK_APP hangman.py
 
-# Set the entry point
-# ENTRYPOINT ["flask"]
-
 # Start the server
 CMD flask run --host=0.0.0.0
