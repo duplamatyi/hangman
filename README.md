@@ -7,7 +7,7 @@ Simple HANGMAN that works as follows:
 * the user can only ask 5 letters that don't exist in the word and then it's game over
 * if the user wins, congratulate him!
 
-Technologies:
+# Technologies:
 
 * Flask 0.12 /w Python 3.6
 * JQuery, CSS
