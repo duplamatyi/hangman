@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hangman.css') }}">
+</head>
+<body>
+    <h1>Welcome to hangman ({{ word }})</h1>
+    <h2>&nbsp;</h2>
+    <div id="word">
+        {% for i in range(0, word_len) %}
+            <span>_</span>
+        {% endfor %}
+    </div>
+
+    <div id="restart">
+        <input id="restart-btn" type="button" value="Restart" onclick="window.location.reload()">
+    </div>
+
+    <div id="form">
+        <form id="guess-form">
+            <label for="guess">Enter a letter:</label>
+            <input id="guess" type="text" name="guess" maxlength="1" size="1">
+            <input type="hidden" name="index" value="{{ index }}">
+            <input type="hidden" name="count" value="0">
+            <input id="guess-btn" type="button" value="Guess">
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery-3.1.1.min.js') }}">\x3C/script>')</script>
+    <script src="{{ url_for('static', filename='hangman.js') }}"></script>
+</body>
